@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  fp-tower-sbt:
+    image: mozilla/sbt:8u292_1.5.4
+    container_name: fp-tower-sbt
+    working_dir: /app
+    volumes:
+      - .:/app
+      - ~/.sbt:/root/.sbt
+      - ~/.ivy2:/root/.ivy2/
+    stdin_open: true
+    tty: true
